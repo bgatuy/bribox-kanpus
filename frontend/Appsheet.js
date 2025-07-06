@@ -9,7 +9,7 @@ pdfInput.addEventListener("change", async () => {
   const formData = new FormData();
   formData.append("file", file);
 
-  output.textContent = "⏳ Sedang diproses...";
+  output.textContent = "⏳ Sedang memproses...";
 
   try {
     const response = await fetch("http://127.0.0.1:5000/upload", {
@@ -17,11 +17,15 @@ pdfInput.addEventListener("change", async () => {
       body: formData,
     });
 
+    if (!response.ok) {
+      throw new Error(`Server error ${response.status}`);
+    }
+
     const data = await response.json();
     output.textContent = data.hasil || "⚠️ Gagal mengekstrak data.";
-  } catch (error) {
-    output.textContent = "❌ Error saat mengirim ke server.";
-    console.error("Fetch error:", error);
+  } catch (err) {
+    output.textContent = "❌ Gagal menghubungi server atau memproses file.";
+    console.error("Fetch error:", err);
   }
 });
 
@@ -32,7 +36,6 @@ copyBtn.addEventListener("click", () => {
   textarea.select();
   document.execCommand("copy");
   document.body.removeChild(textarea);
-
   copyBtn.textContent = "✔ Copied!";
   setTimeout(() => (copyBtn.textContent = "Copy"), 1500);
 });

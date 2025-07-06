@@ -1,16 +1,12 @@
 {
-  "name": "percobaan-2",
+  "name": "bribox-kanpus",
   "version": "1.0.0",
-  "description": "",
-  "main": "Appsheet.js",
+  "main": "index.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "multiparty": "^4.2.3",
     "pdf-parse": "^1.1.1"
