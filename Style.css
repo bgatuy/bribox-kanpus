@@ -144,7 +144,6 @@ input[type="file"] {
     color: #f0f0f0;
   }
 
-  {
   .upload-label {
     background-color: #1e1e1e;
     color: #f0f0f0;
@@ -160,7 +159,6 @@ input[type="file"] {
     background-color: #1f2c3a;
     transform: scale(0.98);
   }
-}
 
   #output {
     background-color: #1e1e1e;
@@ -254,7 +252,7 @@ input[type="file"] {
         font-size: 16px;
       }
     }
-
+  
 /* Form Container */
 .form-box {
   background: #fff;
@@ -534,14 +532,16 @@ button:hover,
 #downloadBtn:hover {
   background-color: #00b248;
 }
+
 body {
-      font-family: Segoe UI';
+      font-family: Segoe UI; 
       margin: 0;
       padding: 50px;
       background: #f9f9f9;
       color: #222;
     }
-
+  
+    
     #mergeContainer {
       background: #fff;
       border: 1px solid #ccc;
@@ -553,7 +553,7 @@ body {
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
-    #mergeInput {
+  #mergeInput {
       margin: 10px 0;
     }
 
@@ -594,6 +594,7 @@ body {
         background-color: #121212;
         color: #f0f0f0;
       }
+    
 
       #mergeContainer {
         background: #1e1e1e;
@@ -603,3 +604,4 @@ body {
       #mergeBtn {
         background-color: #00c853;
       }
+    }
